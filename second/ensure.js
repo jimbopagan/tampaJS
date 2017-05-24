@@ -2,5 +2,15 @@
 //or an argument is undefined. Otherwise it should return the given value.
 
 function ensure(value) {
-
+  if (value === undefined){
+    return "value is undefined";
+  }
+  return value;
 }
+
+
+
+
+
+
+
