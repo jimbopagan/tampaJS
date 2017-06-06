@@ -2,5 +2,10 @@
 //so 'pix', '9ix' .. all count.
 
 var mixStart=function(str){ 
-
+for (var i=0; i<str.length;i++){
+  if(str[i] === 'i' && str[i+1] === 'x'){
+    return true
+  }
+}
+return false;
 }
