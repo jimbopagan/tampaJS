@@ -40,5 +40,22 @@
 //A string, reformatted so that dashes divide it into groups with a length of k or shorter.
 
 function stringReformatting(s, k) {
-
+    var newS = '';
+    var arr = [];
+    for (var i=0; i<s.length; i++){
+        if (s[i] != '-'){
+        arr.push(s[i])
+        }
+    }
+    for (var j =0; j<arr.length; j++){
+        if (arr.length != 0 && k != j){
+            newS += arr[j].toString();
+        }
+        else if (k === j || j === 2*k){
+            newS += '-'
+        }
+    }
+    return newS;
 }
+
+stringReformatting("2-4a0r7-4k", 3)
